@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+
 <body>
   <h1>Currency Monitor</h1>
-  <div class='select-cur' id='select-curance'>
+  <div class='select-cur' id='select-cur'>
     <form action="">
       <input list="browsers">
       <datalist id="browsers">
+        <option value="USD"></option>
+        <option value="JPY"></option>
+        <option value="CNY"></option>
+        <option value="SGD"></option>
+        <option value="HKD"></option>
+        <option value="CAD"></option>
+        <option value="NZD"></option>
+        <option value="AUD"></option>
+        <option value="CLP"></option>
+        <option value="GBP"></option>
+        <option value="DKK"></option>
+        <option value="SEK"></option>
+        <option value="ISK"></option>
+        <option value="CHF"></option>
+        <option value="BRL"></option>
+        <option value="EUR"></option>
+        <option value="RUB"></option>
+        <option value="PLN"></option>
+        <option value="THB"></option>
+        <option value="KRW"></option>
+        <option value="TWD"></option>
       </datalist>
-      <input type="button" class="btn-cur">
+      <input type="button" class="btn-cur" value="Submit">
     </form>
   </div>
   <div class="result">
@@ -23,4 +46,5 @@
     <p class="result-calc" id="result-calc"></p>
   </div>
 </body>
+
 </html>
