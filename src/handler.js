@@ -1,5 +1,6 @@
 //servFiles
 // function to serv the public files to the dom
+const path=require('path');
 const fs = require('fs');
 const contentType = {
   html : 'text/html' ,
@@ -18,10 +19,23 @@ const servePublic = (endpoint, res) => {
    }else{
      res.end(file);
    }
-
  })
 }
 
 // fetch API
 // make a request to the external api and return the required data
-module.exports = {servePublic} ;
+
+const request = require('request');
+const handler = (req, res, value) => {
+
+const url = `https://blockchain.info/tobtc?currency=${value}&value=1`;
+  request.get(url, (error, response, body) => {
+  res.end(body)
+    });
+}
+
+
+
+// fetch API
+// make a request to the external api and return the required data
+module.exports = {servePublic, handler} ;
