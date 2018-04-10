@@ -1,5 +1,6 @@
 //servFiles
 // function to serv the public files to the dom
+
 const fs = require('fs');
 const path = require('path');
 const contentType = {
@@ -20,7 +21,6 @@ const servePublic = (endpoint, res) => {
    else{
      res.end(file);
    }
-
  })
 }
 
@@ -30,7 +30,7 @@ const servePublic = (endpoint, res) => {
 const request = require('request');
 const handler = (req, res, value) => {
   const url = `https://blockchain.info/tobtc?currency=${value}&value=1`
-  request.get(url, (error, response, body)=> {
+  request.get(url, (error, response, body) => {
     if (error){
       return error;
     }
