@@ -1,7 +1,7 @@
 const http = require('http');
-const handler = require('./handler')
+const router = require('./router');
 const port = 3000;
-const server = http.createServer(handler);
+const server = http.createServer(router);
 
 server.listen(port, ()=> console.log(`this server runs on port ${port}`)
 );
