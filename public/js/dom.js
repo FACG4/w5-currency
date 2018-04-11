@@ -12,11 +12,7 @@ amountInput.addEventListener('change',function(e){
  var amount = amountInput.value;
 
  fetch('/getrate','POST',amount,currType,function(response){
-<<<<<<< HEAD
-   console.log(response);
-=======
 
     result.textContent = amount+'  '+currType +' =  '+response+'  Bitcoin.';
->>>>>>> a2741245db51c15c665b5dbec865e6070c8ec229
  });
 });
