@@ -16,8 +16,7 @@ test('testing home endpoint', (t)=>{
       t.end();
     }
   });
-})
-  // test css/js files
+});
 
   // test form request
 test('testing form', (t)=>{
