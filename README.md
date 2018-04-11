@@ -23,7 +23,7 @@ Our project has the following file structure:
 ### Planning Phase:
 
 #### the workflow:
-
+ ![workflow](/public/x.jpg)
 #### 3 phases:
   * **Backend development**
   * **Backend testing**
