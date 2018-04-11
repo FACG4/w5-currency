@@ -2,17 +2,21 @@
 var select = (selector)=>{
   return document.querySelector(selector);
 }
-var curnType = select('#browsers').value;
-var amount = select('.amount').value;
+var x = select('#browsers');
+var y = select('.amount');
+
 var ok= select('.end')
 
 
 ok.addEventListener('click',function(e){
-
+ var curnType = x.value;
+ var amount = y.value;
+ 
 
  fetch('/getrate','POST',amount,curnType,function(response){
-  console.log(response);
- 
+    console.log(response);
+    
+  
  });
 });
 
