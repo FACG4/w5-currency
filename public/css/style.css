@@ -1,3 +1,62 @@
 body{
-  background-color: green;
+  background-color: royalblue;
+  background-image: url('https://www.incapsula.com/blog/wp-content/uploads/2016/05/Bitcoins.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width:100%;
+  min-height: 100%;
+  justify-content: center;
+  text-align: center;
+  background-attachment: fixed;
+}
+#browsers {
+  margin-bottom: 30px;
+  width: 30%;
+  height: 50px;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 20px;
+  border:darkgoldenrod 1px solid;
+  text-align:center;
+  background-color:navajowhite;
+  color:#38240f;
+}
+h1 {
+  color:#38240f;
+  font-size:300%;
+  font-family:-webkit-bod;
+  }
+
+.amount{
+  width: 30%;
+  height: 50px;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 20px;
+  border:darkgoldenrod 1px solid;
+  text-align:center;
+  background-color:navajowhite;
+  color:#38240f;
+}
+.trans:hover{
+  animation:  swingin 2s ease;
+}
+@keyframes swingin{
+  50%{transform: translateX(20px)}
+  50%{transform: translateX(-40px)}
+}
+
+.result-calc{
+  margin-top:20px;
+  font-size: 30px;
+  width:50%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align:center;
+  background-color:navajowhite;
+  margin-right:300px;
+  margin-left:200px;
+  color:#38240f;
+  border-radius: 20px;
+  border:darkgoldenrod 1px solid;
 }
