@@ -11,6 +11,6 @@ submit.addEventListener('click',function(e){
  var amount = amountInput.value;
 
  fetch('/getrate','POST',amount,currType,function(response){
-    console.log(response);
+   console.log(response);
  });
 });
