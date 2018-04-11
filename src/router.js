@@ -7,7 +7,7 @@ const router  = (req ,res)=>{
     handler.servePublic('index.html',res);
   } else if(url === '/getrate') {
     handler.getRate(req, res);
-  } else if(['/css/style.css', '/js/dom.js', '/js/request.js'].includes(url)){
+  } else if(['/favicon.ico','/css/style.css', '/js/dom.js', '/js/request.js'].includes(url)){
     handler.servePublic(url, res);
   } else {
     handler.notFound(url, res);
