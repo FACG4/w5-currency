@@ -24,20 +24,34 @@ const servePublic = (endpoint, res) => {
  })
 }
 
+//get the value from client side;
+
+let getRate = (req, res) => {
+    let currency = '';
+    req.on('data', (chunk) => {
+      currency += chunk;
+
+    });
+    req.on('end', ()=>{
+      rateFromApi(res, currency);
+    });
+}
+
 // fetch API
 // make a request to the external api and return the required data
 
 const request = require('request');
-const handler = (req, res, value) => {
-  const url = `https://blockchain.info/tobtc?currency=${value}&value=1`
+const rateFromApi = (res, currency) => {
+  const url = `https://blockchain.info/tobtc?currency=${currency}&value=1`
   request.get(url, (error, response, body) => {
     if (error){
       return error;
     }
     else {
+      res.writeHead(302, {'location': '/'})
       res.end(body);
     }
   });
 }
 
-module.exports = {servePublic, handler} ;
+module.exports = {servePublic, getRate};
