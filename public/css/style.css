@@ -54,8 +54,7 @@ h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align:center;
   background-color:navajowhite;
-  margin-right:300px;
-  margin-left:200px;
+  margin: 5% auto;
   color:#38240f;
   border-radius: 20px;
   border:darkgoldenrod 1px solid;
