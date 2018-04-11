@@ -22,8 +22,8 @@ test('testing home endpoint', (t)=>{
 test('testing form', (t)=>{
   supertest(router)
   .post('/getrate')
-  .expect(302)
-  .send('USD')
+  .expect(200)
+  .send('{"value":"usd","amount":"213"}')
   .end((error, res)=>{
     if(error) console.log(error);
     else{
@@ -32,9 +32,10 @@ test('testing form', (t)=>{
       t.end();
     }
   })
-
-
 })
+
+
+
 
 
 // test for the external API function
