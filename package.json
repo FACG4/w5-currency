@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "tape test/test-back.js | tap-spec"
+    "test": "tape test/test-back.js | tap-spec",
+    "start": "nodemon ./src/server.js"
   },
   "repository": {
     "type": "git",

@@ -10,41 +10,24 @@
 
 <body>
   <h1>Currency Monitor</h1>
-  <div class='select-cur' id='select-cur'>
-    <form action="">
-      <input list="browsers">
-      <datalist id="browsers">
-        <option value="USD"></option>
-        <option value="JPY"></option>
-        <option value="CNY"></option>
-        <option value="SGD"></option>
-        <option value="HKD"></option>
-        <option value="CAD"></option>
-        <option value="NZD"></option>
-        <option value="AUD"></option>
-        <option value="CLP"></option>
-        <option value="GBP"></option>
-        <option value="DKK"></option>
-        <option value="SEK"></option>
-        <option value="ISK"></option>
-        <option value="CHF"></option>
-        <option value="BRL"></option>
-        <option value="EUR"></option>
-        <option value="RUB"></option>
-        <option value="PLN"></option>
-        <option value="THB"></option>
-        <option value="KRW"></option>
-        <option value="TWD"></option>
-      </datalist>
-      <input type="button" class="btn-cur" value="Submit">
-    </form>
+  <div class='select-cur' id='select-curance'>
+
+      <select id="browsers">
+     
+          <option class ='opt1' value="sr">sr</option>
+          <option class ='opt1' value="usd">usd</option>
+          <option class ='opt1' value="eur">eur</option>
+          </select>
   </div>
   <div class="result">
   </div>
   <div class="calc">
-    <input type="text" placeholder="write amount">
+    <input type="number" class="amount">
     <p class="result-calc" id="result-calc"></p>
   </div>
+  <button class="submit">ok</button>
+  <script src="./js/dom.js"></script>
+  <script src="./js/request.js"></script>
 </body>
 
 </html>

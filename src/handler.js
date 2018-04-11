@@ -1,8 +1,7 @@
-//servFiles
-// function to serv the public files to the dom
-
 const fs = require('fs');
 const path = require('path');
+const request = require('request');
+
 const contentType = {
   html : 'text/html' ,
   css : 'text/css' ,
@@ -10,6 +9,7 @@ const contentType = {
   ico : 'images/ico',
   js  : 'text/javascript'
 }
+
 const servePublic = (endpoint, res) => {
  const filePath =path.join(__dirname,'..','public',endpoint);
  const fileExtention = endpoint.split('.')[1];
@@ -24,31 +24,30 @@ const servePublic = (endpoint, res) => {
  })
 }
 
-//get the value from client side;
-
 let getRate = (req, res) => {
-    let currency = '';
+    let data = '';
     req.on('data', (chunk) => {
-      currency += chunk;
+      data += chunk;
+      console.log(data);
 
     });
     req.on('end', ()=>{
-      rateFromApi(res, currency);
+      data = JSON.parse(data)
+      const currency = data.value;
+      const amount = data.amount;  
+      rateFromApi(res, currency , amount);
     });
 }
 
-// fetch API
-// make a request to the external api and return the required data
-
-const request = require('request');
-const rateFromApi = (res, currency) => {
-  const url = `https://blockchain.info/tobtc?currency=${currency}&value=1`
+const rateFromApi = (res, currency,amount) => {
+  const url = `https://blockchain.info/tobtc?currency=${currency}&value=${amount}`  
   request.get(url, (error, response, body) => {
     if (error){
       return error;
     }
     else {
-      res.writeHead(302, {'location': '/'})
+      res.writeHead(200, {'Content-Type': 'text/plain'})
+      console.log(body,"d")
       res.end(body);
     }
   });

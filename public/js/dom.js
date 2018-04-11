@@ -1,3 +1,16 @@
-// currency rate listener
+var select = (selector)=>{
+  return document.querySelector(selector);
+}
 
-//calc listener
+var selectCurr = select('#browsers');
+var amountInput = select('.amount');
+var submit = select('.submit');
+
+submit.addEventListener('click',function(e){
+ var currType = selectCurr.value;
+ var amount = amountInput.value;
+
+ fetch('/getrate','POST',amount,currType,function(response){
+    console.log(response);
+ });
+});
