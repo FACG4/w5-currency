@@ -6,26 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
   <h1>Currency Monitor</h1>
-  <div class='select-cur' id='select-curance'>
+  <div class='select-cur ' id='select-curance'>
 
-      <select id="browsers">
+      <select id="browsers" class="trans">
      
           <option class ='opt1' value="sr">sr</option>
           <option class ='opt1' value="usd">usd</option>
           <option class ='opt1' value="eur">eur</option>
           </select>
   </div>
-  <div class="result">
-  </div>
-  <div class="calc">
+  <div class="calc trans">
     <input type="number" class="amount">
-    <p class="result-calc" id="result-calc"></p>
   </div>
-  <button class="submit">ok</button>
+  <div class="result-calc trans " id="result-calc">
+    
+  </div>
+  
+ <!-- <button class="submit">ok</button> -->
   <script src="./js/dom.js"></script>
   <script src="./js/request.js"></script>
 </body>
