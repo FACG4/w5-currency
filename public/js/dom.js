@@ -5,12 +5,14 @@ var select = (selector)=>{
 var selectCurr = select('#browsers');
 var amountInput = select('.amount');
 var submit = select('.submit');
+var result = select('.result-calc')
 
-submit.addEventListener('click',function(e){
+amountInput.addEventListener('change',function(e){
  var currType = selectCurr.value;
  var amount = amountInput.value;
 
  fetch('/getrate','POST',amount,currType,function(response){
-    console.log(response);
+
+    result.textContent = amount+'  '+currType +' =  '+response+'  Bitcoin.';
  });
 });
