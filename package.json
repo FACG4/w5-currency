@@ -7,8 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "tape test/test-back.js | tap-spec",
-    "start": "nodemon ./src/server.js"
+     "start": "nodemon ./src/server.js",
+     "test": "istanbul cover ./test/test-back.js"
+
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/FACG4/w5-currency#readme",
   "devDependencies": {
+    "istanbul": "^0.4.5",
     "nodemon": "^1.17.3",
     "supertest": "^3.0.0",
     "tap-spec": "^4.1.1",
