@@ -24,18 +24,16 @@ const servePublic = (endpoint, res) => {
  })
 }
 
-let getRate = (req, res) => {
+const getRate = (req, res) => {
     let data = '';
     req.on('data', (chunk) => {
       data += chunk;
 
     });
     req.on('end', ()=>{
-      console.log(data);
-      console.log(typeof data);
       data = JSON.parse(data)
-      const currency = data.value;
-      const amount = data.amount;
+      const {value: currency} = data;
+      const {amount: amount} = data;
       rateFromApi(res, currency , amount);
     });
 }
